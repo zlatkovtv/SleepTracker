@@ -692,6 +692,7 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.onSuccess = function (data) {
         if (data.length === 0) {
+            alert("No data for this name and birthdate.");
             return;
         }
         this.hideSearchContainer = true;
