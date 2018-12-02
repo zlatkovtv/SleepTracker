@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	onSuccess(data: SleepData[]) {
-		if (data.length === 0) {
+		if (data.length === 0 || (Object.keys(data).length === 0 && data.constructor === Object)) {
 			alert("No data for this name and birthdate.");
 			return;
 		}

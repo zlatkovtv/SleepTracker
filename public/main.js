@@ -691,7 +691,7 @@ var HomeComponent = /** @class */ (function () {
             .subscribe(function (data) { return _this.onSuccess(data); }, function (error) { return _this.handleError(error); });
     };
     HomeComponent.prototype.onSuccess = function (data) {
-        if (data.length === 0) {
+        if (data.length === 0 || (Object.keys(data).length === 0 && data.constructor === Object)) {
             alert("No data for this name and birthdate.");
             return;
         }
