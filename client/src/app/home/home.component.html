@@ -1,0 +1,24 @@
+<div class="home-container">
+	<div id="search-container">
+		<h1 class="display-3 title">SleepTracker</h1>
+		<h1 class="display-4">See your sleep schedule</h1>
+		<div id="search-fields-container">
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Subject names</span>
+				</div>
+				<input [(ngModel)]="user.FullName" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+			</div>
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Subject Birthdate</span>
+				</div>
+				<ng-datepicker position="top-right" [options]="options" [(ngModel)]="user.BirthDate"></ng-datepicker>
+			</div>
+		</div>
+		<div id="search-button-container">
+			<button (click)="getSleepData()" type="button" class="btn btn-dark btn-lg">Show data</button>
+		</div>
+	</div>
+</div>
+
